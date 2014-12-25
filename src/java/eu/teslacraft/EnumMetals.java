@@ -11,7 +11,8 @@ import net.minecraft.util.IIcon;
 public enum EnumMetals {
     COPPER("Copper"),
     ALUMINIUM("Aluminium"),
-    TIN("Tin");
+    TIN("Tin"),
+    LEAD("Lead");
 
     public static final EnumMetals[] VALID = values();
 

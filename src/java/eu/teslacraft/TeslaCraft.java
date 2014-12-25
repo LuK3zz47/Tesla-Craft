@@ -47,7 +47,7 @@ public class TeslaCraft {
     private Item worldEater;
 
     public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("copperToolMaterial", 5, 199, 5.0F, 1.0F, 30);
-    public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("copperArmorMaterial", 5000, new int[]{1, 1, 1, 1}, 30);
+    public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("copperArmorMaterial", 5000, new int[]{1, 5, 6, 1}, 30);
     public static OreGenerator copperGenerator, tinGenerator, aluminiumGenerator;
 
     public static void initializeBlocks() {
@@ -79,6 +79,7 @@ public class TeslaCraft {
         GameRegistry.addSmelting(EnumMetals.COPPER.getIS(ore, 1), EnumMetals.COPPER.getItemIS(ingot, 1), 3.0F);
         GameRegistry.addSmelting(EnumMetals.TIN.getIS(ore, 1), EnumMetals.TIN.getItemIS(ingot, 1), 3.0F);
         GameRegistry.addSmelting(EnumMetals.ALUMINIUM.getIS(ore, 1), EnumMetals.ALUMINIUM.getItemIS(ingot, 1), 3.0F);
+        GameRegistry.addSmelting(EnumMetals.LEAD.getIS(ore, 1), EnumMetals.LEAD.getItemIS(ingot, 1), 3.0F);
     }
 
     public static void registerOreDict() {

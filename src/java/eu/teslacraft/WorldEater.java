@@ -24,7 +24,7 @@ public class WorldEater extends Item {
             for(int nowZ = z - 4; nowZ <= z + 4; nowZ++){
                 for(int nowY = y - 4; nowY <= y + 4; nowY++){
                     Block block = world.getBlock(nowX, nowY, nowZ);
-                    if(block instanceof BlockStone || block instanceof BlockDirt || block instanceof BlockGrass || block instanceof BlockGravel || block instanceof BlockSand || block instanceof BlockLiquid) {
+                    if(block instanceof BlockStone || block instanceof BlockDirt || block instanceof BlockGrass || block instanceof BlockGravel || block instanceof BlockSand || block instanceof BlockLiquid || block instanceof BlockNetherrack || block instanceof BlockSoulSand) {
                         FMLClientHandler.instance().getServer().worldServerForDimension(player.dimension).setBlockToAir(nowX, nowY, nowZ);
                     }
                 }

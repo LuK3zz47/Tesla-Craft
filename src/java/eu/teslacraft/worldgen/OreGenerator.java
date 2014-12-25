@@ -23,11 +23,10 @@ public class OreGenerator implements IWorldGenerator {
         this.generatedMetal = generatedMetal;
         this.minY = minY;
         this.maxY = maxY;
-        this.clustersInChunk = clustersInChunk;
+        this.clustersInChunk = clustersInChunk;	
         this.clusterSize = clusterSize;
     }
 
-    @Override
     public void generate(Random random, int chunkX, int chunkZ, World world, IChunkProvider chunkGenerator, IChunkProvider chunkProvider) {
         switch (world.provider.dimensionId) {
             case -1:
