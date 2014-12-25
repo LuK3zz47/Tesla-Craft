@@ -9,12 +9,16 @@
 :downloadServer SKIPPED
 :getVersionJson
 :extractUserDev
+Download http://files.minecraftforge.net/maven/net/minecraftforge/forge/1.7.10-10.13.2.1277/forge-1.7.10-10.13.2.1277-userdev.jar
 :mergeJars SKIPPED
-:applyBinPatches SKIPPED
+:applyBinPatches
 :downloadMcpTools SKIPPED
 :extractMcpData
-:genSrgs SKIPPED
-:deobfBinJar SKIPPED
+:genSrgs
+:deobfBinJar
+Applying SpecialSource...
+Applying Exceptor...
+Stripping synthetics...
 :compileApiJava UP-TO-DATE
 :processApiResources UP-TO-DATE
 :apiClasses UP-TO-DATE
@@ -40,4 +44,4 @@ Note: Recompile with -Xlint:unchecked for details.
 
 BUILD SUCCESSFUL
 
-Total time: 1 mins 7.566 secs
+Total time: 1 mins 0.735 secs

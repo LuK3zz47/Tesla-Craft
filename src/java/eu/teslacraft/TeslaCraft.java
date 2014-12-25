@@ -1,5 +1,9 @@
 package eu.teslacraft;
 
+/**
+ * Created by Buk on 24/12/2014.
+ */
+
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
