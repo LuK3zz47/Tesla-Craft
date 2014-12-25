@@ -1,20 +1,23 @@
 package eu.teslacraft;
 
-/**
- * Created by Buk on 24/12/2014.
- */
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
+import cpw.mods.fml.relauncher.SideOnly;
 import eu.teslacraft.blocks.BlockBlock;
 import eu.teslacraft.blocks.BlockNetherOre;
 import eu.teslacraft.blocks.BlockOre;
+import eu.teslacraft.blocks.BlockWindmill;
 import eu.teslacraft.items.*;
 import eu.teslacraft.items.tools.*;
+import eu.teslacraft.proxy.CommonProxy;
 import eu.teslacraft.worldgen.OreGenerator;
+import net.minecraft.block.Block;
+import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
@@ -48,9 +51,16 @@ public class TeslaCraft {
     public static Item copperLeggings;
     public static Item copperBoots;
 
+    public static Block blockWindmill;
+
+    public static Item itemWindmill;
+
+    @SidedProxy(clientSide ="eu.teslacraft.proxy.ClientProxy", serverSide ="eu.teslacraft.proxy.CommonProxy")
+    public static CommonProxy proxy;
+
     private Item worldEater;
 
-    public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("copperToolMaterial", 5, 199, 5.0F, 1.0F, 30);
+    public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("copperToolMaterial", 1, 199, 4.5F, 1.0F, 30);
     public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("copperArmorMaterial", 5000, new int[]{1, 5, 6, 1}, 30);
     public static OreGenerator copperGenerator, tinGenerator, aluminiumGenerator, leadGenerator;
 
@@ -143,6 +153,12 @@ public class TeslaCraft {
 
         worldEater = new WorldEater();
         GameRegistry.registerItem(worldEater, "itemWorldEater");
+
+        blockWindmill = new BlockWindmill(Material.rock);
+        GameRegistry.registerBlock(blockWindmill, "BlockWindmill");
+
+        itemWindmill = new ItemWindmill().setTextureName("diamond").setCreativeTab(teslaTab);
+        GameRegistry.registerItem(itemWindmill, "ItemWindmill");
     }
 
 
@@ -165,5 +181,9 @@ public class TeslaCraft {
         GameRegistry.addRecipe(new ItemStack(copperChestplate), "C C", "CCC", "CCC", 'C', EnumMetals.COPPER.getItemIS(ingot, 1));
         GameRegistry.addRecipe(new ItemStack(copperLeggings), "CCC", "C C", "C C", 'C', EnumMetals.COPPER.getItemIS(ingot, 1));
         GameRegistry.addRecipe(new ItemStack(copperBoots), "C C", "C C", 'C', EnumMetals.COPPER.getItemIS(ingot, 1));
+
+        GameRegistry.registerTileEntity(TileEntityWindmill.class, "Windmill");
+
+        proxy.registerProxies();
     }
 }
