@@ -1,14 +1,14 @@
-package net.Tesla_Craft.stuff;
+package eu.teslacraft.worldgen;
 
 import java.util.Random;
 
+import eu.teslacraft.TeslaCraft;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
-import net.Tesla_Craft.stuff.*;
 
 public class CopperGenerator implements IWorldGenerator {
 
@@ -37,7 +37,7 @@ public class CopperGenerator implements IWorldGenerator {
 	
 	public void generatreOverworld(World world, Random rand, int x, int z)
 	{
-		generateOre(TeslaCraft.copperOre, world, rand, x, z, 2, 10, 5, 0, 100, Blocks.stone);
+		generateOre(TeslaCraft.ore, world, rand, x, z, 2, 10, 5, 0, 100, Blocks.stone);
 	}
 	public void generateNether(World world, Random rand, int x, int z)
 	{

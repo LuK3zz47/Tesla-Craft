@@ -1,7 +1,8 @@
-package net.Tesla_Craft.stuff;
+package eu.teslacraft.worldgen;
 
 import java.util.Random;
 
+import eu.teslacraft.TeslaCraft;
 import net.minecraft.block.Block;
 import net.minecraft.init.Blocks;
 import net.minecraft.world.World;
@@ -34,7 +35,7 @@ public class TinGenerator implements IWorldGenerator {
 	
 	public void generatreOverworld(World world, Random rand, int x, int z)
 	{
-		generateOre(TeslaCraft.tinOre, world, rand, x, z, 2, 10, 5, 0, 100, Blocks.stone);
+		generateOre(TeslaCraft.ore, world, rand, x, z, 2, 10, 5, 0, 100, Blocks.stone);
 	}
 	
 	public void generateNether(World world, Random rand, int x, int z)

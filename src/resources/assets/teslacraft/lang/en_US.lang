@@ -1,0 +1,39 @@
+itemGroup.TeslaCraft=TeslaCraft
+itemGroup.TeslaCraft Creativetools=TeslaCraft CreativeTools
+
+tile.teslacraft.ore.oreCopper.name=Copper Ore
+tile.teslacraft.ore.oreAluminium.name=Aluminium Ore
+tile.teslacraft.ore.oreTin.name=Tin Ore
+
+tile.teslacraft.netherOre.netherOreCopper.name=Copper Nether Ore
+tile.teslacraft.netherOre.netherOreAluminium.name=Aluminium Nether Ore
+tile.teslacraft.netherOre.netherOreTin.name=Tin Nether Ore
+
+tile.teslacraft.block.blockCopper.name=Copper Block
+tile.teslacraft.block.blockAluminium.name=Aluminium Block
+tile.teslacraft.block.blockTin.name=Tin Block
+
+item.teslacraft.logo.name=TeslaCraft Logo
+item.teslacraft.worldEater.name=World Eater
+
+item.teslacraft.ingotCopper.name=Copper Ingot
+item.teslacraft.ingotAluminium.name=Aluminium Ingot
+item.teslacraft.ingotTin.name=Tin Ingot
+
+item.teslacraft.dustCopper.name=Copper Dust
+item.teslacraft.dustAluminium.name=Aluminium Dust
+item.teslacraft.dustTin.name=Tin Dust
+
+item.teslacraft.nuggetCopper.name=Copper Nugget
+item.teslacraft.nuggetAluminium.name=Aluminium Nugget
+item.teslacraft.nuggetTin.name=Tin Nugget
+
+item.copperPick.name=Copper Pickaxe
+item.copperAxe.name=Copper Axe
+item.copperShovel.name=Copper Shovel
+item.copperHoe.name=Copper Hoe
+item.copperSword.name=Copper Sword
+item.copperHelmet.name=Copper Helmet
+item.copperChestplate.name=Copper Chest Plate
+item.copperLeggings.name=Copper Leggings
+item.copperBoots.name=Copper Boots
