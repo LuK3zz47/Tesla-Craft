@@ -52,7 +52,7 @@ public class TeslaCraft {
 
     public static final Item.ToolMaterial copperToolMaterial = EnumHelper.addToolMaterial("copperToolMaterial", 5, 199, 5.0F, 1.0F, 30);
     public static final ItemArmor.ArmorMaterial copperArmorMaterial = EnumHelper.addArmorMaterial("copperArmorMaterial", 5000, new int[]{1, 5, 6, 1}, 30);
-    public static OreGenerator copperGenerator, tinGenerator, aluminiumGenerator;
+    public static OreGenerator copperGenerator, tinGenerator, aluminiumGenerator, leadGenerator;
 
     public static void initializeBlocks() {
         ore = new BlockOre();
@@ -110,6 +110,9 @@ public class TeslaCraft {
 
         aluminiumGenerator = new OreGenerator(EnumMetals.ALUMINIUM, 0, 60, 5, 4);
         GameRegistry.registerWorldGenerator(aluminiumGenerator, 1);
+
+        leadGenerator = new OreGenerator(EnumMetals.LEAD, 0, 60, 5, 4);
+        GameRegistry.registerWorldGenerator(leadGenerator, 1);
 
         copperPickaxe = new ItemCopperPickaxe(copperToolMaterial);
         GameRegistry.registerItem(copperPickaxe, copperPickaxe.getUnlocalizedName());
