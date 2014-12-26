@@ -12,6 +12,7 @@ import eu.teslacraft.blocks.*;
 import eu.teslacraft.items.*;
 import eu.teslacraft.items.tools.*;
 import eu.teslacraft.proxy.CommonProxy;
+import eu.teslacraft.tileentity.TileEntityWindmillFloor;
 import eu.teslacraft.worldgen.OreGenerator;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -184,6 +185,7 @@ public class TeslaCraft {
         GameRegistry.addRecipe(new ItemStack(copperBoots), "C C", "C C", 'C', EnumMetals.COPPER.getItemIS(ingot, 1));
 
         GameRegistry.registerTileEntity(TileEntityWindmill.class, "Windmill");
+        GameRegistry.registerTileEntity(TileEntityWindmillFloor.class, "WindmillFloor");
 
         proxy.registerProxies();
     }

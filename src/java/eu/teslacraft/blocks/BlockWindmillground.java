@@ -3,9 +3,12 @@ package eu.teslacraft.blocks;
 import eu.teslacraft.References;
 import eu.teslacraft.TeslaCraft;
 import eu.teslacraft.TeslaTab;
+import eu.teslacraft.tileentity.TileEntityWindmillFloor;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockContainer;
 import net.minecraft.block.material.Material;
 import net.minecraft.init.Blocks;
+import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.MovingObjectPosition;
 import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
@@ -13,7 +16,7 @@ import net.minecraft.world.World;
 /**
  * Created by Lukin on 26.12.2014.
  */
-public class BlockWindmillground extends Block {
+public class BlockWindmillground extends BlockContainer {
 
     public BlockWindmillground(Material material) {
         super(material);
@@ -22,6 +25,10 @@ public class BlockWindmillground extends Block {
         setCreativeTab(TeslaCraft.teslaTab);
         setBlockName("Windmill Ground");
         setBlockTextureName(References.MOD_ID + ":blockWindmillground");
+    }
+
+    public int getRenderType(){
+        return -1;
     }
 
     public boolean renderAsNormalBlock() {
@@ -38,14 +45,6 @@ public class BlockWindmillground extends Block {
 
     public void onBlockAdded(World world, int x, int y, int z) {
         updateMultiBlockStructure(world, x, y, z);
-    }
-
-    public MovingObjectPosition collisionRayTrace(World world, int x, int y, int z, Vec3 startVec, Vec3 endVec){
-        int metadata = world.getBlockMetadata(x, y, z);
-
-        this.setBlockBounds(0, 0, 0, 1, (1F/16)*metadata, 1);
-
-        return super.collisionRayTrace(world, x, y, z, startVec, endVec);
     }
 
     public void updateMultiBlockStructure(World world, int x, int y, int z) {
@@ -90,5 +89,9 @@ public class BlockWindmillground extends Block {
         if(world.getBlockMetadata(x1, y1, z1) > 0) world.setBlockMetadataWithNotify(x1, y1, z1, 0, 3);
 
         return false;
+    }
+
+    public TileEntity createNewTileEntity(World var1, int var2){
+        return new TileEntityWindmillFloor();
     }
 }
