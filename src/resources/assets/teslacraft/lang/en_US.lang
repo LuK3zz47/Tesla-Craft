@@ -43,3 +43,5 @@ item.copperHelmet.name=Copper Helmet
 item.copperChestplate.name=Copper Chest Plate
 item.copperLeggings.name=Copper Leggings
 item.copperBoots.name=Copper Boots
+
+tile.Windmill Ground.name=Windmill Ground

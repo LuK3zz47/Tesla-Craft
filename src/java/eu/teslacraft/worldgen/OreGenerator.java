@@ -45,10 +45,8 @@ public class OreGenerator implements IWorldGenerator {
             int x = (chunkX << 4) + random.nextInt(16);
             int y = random.nextInt(Math.max(maxY - minY, 0) + minY);
             int z = (chunkZ << 4) + random.nextInt(16);
-            System.out.println("Spawning ore for " + chunkX + ";" + chunkZ);
             WorldGenMinable mineable = new WorldGenMinable(block, generatedMetal.meta, clusterSize, Blocks.stone);
             if(world.getChunkProvider().chunkExists(x >> 4, z >> 4)){
-                System.out.println("Spawning ore @ " + x + ";" + y + ";" + z);
                 mineable.generate(world, random, x, y, z);
             }
         }

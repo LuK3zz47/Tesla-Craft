@@ -8,10 +8,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.relauncher.SideOnly;
-import eu.teslacraft.blocks.BlockBlock;
-import eu.teslacraft.blocks.BlockNetherOre;
-import eu.teslacraft.blocks.BlockOre;
-import eu.teslacraft.blocks.BlockWindmill;
+import eu.teslacraft.blocks.*;
 import eu.teslacraft.items.*;
 import eu.teslacraft.items.tools.*;
 import eu.teslacraft.proxy.CommonProxy;
@@ -52,6 +49,7 @@ public class TeslaCraft {
     public static Item copperBoots;
 
     public static Block blockWindmill;
+    public static Block blockWindmillground;
 
     public static Item itemWindmill;
 
@@ -156,6 +154,9 @@ public class TeslaCraft {
 
         blockWindmill = new BlockWindmill(Material.rock);
         GameRegistry.registerBlock(blockWindmill, "BlockWindmill");
+
+        blockWindmillground = new BlockWindmillground(Material.ground);
+        GameRegistry.registerBlock(blockWindmillground, "blockWindmillground");
 
         itemWindmill = new ItemWindmill().setTextureName("diamond").setCreativeTab(teslaTab);
         GameRegistry.registerItem(itemWindmill, "ItemWindmill");
